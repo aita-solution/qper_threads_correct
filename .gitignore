@@ -1,0 +1,85 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.*
+/jspm_packages/
+/bower_components
+/web_modules/
+
+# Testing
+/coverage
+/.nyc_output
+*.lcov
+
+# Next.js
+/.next/
+/out/
+
+# Production
+/build
+/dist
+
+# Environment Variables
+.env
+.env.*
+!.env.example
+
+# Debug & Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Caches
+.cache
+.parcel-cache
+.npm
+.eslintcache
+.stylelintcache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+.node_repl_history
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.vscode-test
+.tern-port
+
+# TypeScript
+*.tsbuildinfo
+
+# Misc
+.DS_Store
+*.pem
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.lock-wscript
+.yarn-integrity
+.serverless/
+.fusebox/
+.dynamodb/
+
+# Build Artifacts
+lib-cov
+build/Release

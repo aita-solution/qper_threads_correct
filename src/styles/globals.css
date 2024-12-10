@@ -1,0 +1,162 @@
+/* styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #fe6f00;
+  --primary-hover: #ff8534;
+  font-family: '29LT Bukra Semi Wide', monospace;
+  background-color: #000;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+.loading-dots div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading-dots div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Markdown Styling */
+.markdown-content {
+  @apply text-base leading-relaxed;
+  
+  /* Entferne Margins vom ersten und letzten Element */
+  > *:first-child {
+    margin-top: 0 !important;
+  }
+  
+  > *:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  /* Überschriften */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold mt-6 mb-4;
+  }
+
+  h1 {
+    @apply text-2xl;
+  }
+
+  h2 {
+    @apply text-xl;
+  }
+
+  h3 {
+    @apply text-lg;
+  }
+
+  /* Listen */
+  ol {
+    @apply list-decimal list-outside ml-6 mb-4 space-y-2;
+  }
+
+  ul {
+    @apply list-disc list-outside ml-6 mb-4 space-y-2;
+  }
+
+  li {
+    @apply pl-2; /* Einrückung für Listenpunkte */
+    
+    /* Verschachtelte Listen */
+    > ul, > ol {
+      @apply mt-2 mb-2;
+    }
+  }
+
+  /* Links */
+  a {
+    @apply text-primary hover:text-primary-hover underline;
+  }
+
+  /* Codeblöcke */
+  pre {
+    @apply bg-gray-100 p-4 rounded-lg my-4 overflow-x-auto;
+  }
+
+  code {
+    @apply bg-gray-100 px-1.5 py-0.5 rounded text-sm;
+  }
+
+  /* Blockquotes */
+  blockquote {
+    @apply border-l-4 border-gray-300 pl-4 italic my-4;
+  }
+
+  /* Tabellen */
+  table {
+    @apply w-full border-collapse my-4;
+  }
+
+  th, td {
+    @apply border p-2 text-left;
+  }
+
+  th {
+    @apply bg-gray-50 font-semibold;
+  }
+
+  /* Horizontale Linie */
+  hr {
+    @apply my-6 border-gray-200;
+  }
+
+  /* Absätze und Textabstände */
+  p {
+    @apply mb-4;
+  }
+
+  /* Fett und Kursiv */
+  strong {
+    @apply font-semibold;
+  }
+
+  em {
+    @apply italic;
+  }
+
+  /* Bilder */
+  img {
+    @apply max-w-full h-auto rounded-lg my-4;
+  }
+}
+
+/* Dark mode Anpassungen für Benutzer-Nachrichten */
+.dark .markdown-content,
+.user-message .markdown-content {
+  pre, code {
+    @apply bg-gray-800;
+  }
+
+  blockquote {
+    @apply border-gray-600;
+  }
+
+  th {
+    @apply bg-gray-800;
+  }
+
+  hr {
+    @apply border-gray-700;
+  }
+}
